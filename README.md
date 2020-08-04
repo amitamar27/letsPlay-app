@@ -7,10 +7,9 @@ Lets Play is a sport app that allow you to share and find people that want to pl
 
 Currently at the moment out team is working to complete the project an run in on IOS and Android.</p>
 
-<h1>Current Version -<h1>
+<h1>Current Version <h1>
 <p>contain: Login Page - Firebase Authentication Forgot Password - based Firebase Create Account - Firebase Authentication + Cloud Storage TabView - Home / Profile / Nearby / Messages / Setting Profile - Full two-way-data-binding based on Cloud Firestore
-
-Get - Create - Update - Delete -</p>
+Get - Create - Update - Delete </p>
 
 <h1>Next Steps -</h1>
 <p>Add the Home Page with Feed Add Messages Page + Chat + Notification Add Nearby + GoogleMaps Add Setting + Preferences</p>
