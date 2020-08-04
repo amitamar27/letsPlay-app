@@ -1,0 +1,87 @@
+<FlexboxLayout >
+    <StackLayout class="form">
+        <!-- <Label class="hr-light"></Label> -->
+        <Label class="sub-title" text="Details"></Label>
+        <!-- <Label class="hr-light"></Label> -->
+        <ScrollView height="800">
+            <StackLayout class="" (loaded)="onLoaded(event)">
+                <!-- user_img -->
+                <!-- <Image src=""></Image> -->
+
+                <!-- user_uid not for client -->
+                <Label text="User ID" editable="false" class="label"></Label>
+                <Label [text]="this.currentUser.user_uid" class=""></Label>
+
+                <!-- email -->
+                <Label text="Email" editable="false" class="label"></Label>
+                <Label hint="Email or Phone" class="" keyboardType="email" [text]="this.currentUser.email">
+                </Label>
+
+
+                <!-- password -->
+                <Label text="Password" editable="false" class="label"></Label>
+                <Label hint="Password" secure="true" class="" [text]="this.currentUser.password">
+                </Label>
+
+
+                <!-- user_birthdate [text]="this.currentUser.user_birthdate" -->
+                <Label [text]="this.currentUser.user_birthdate" class="label">
+                </Label>
+                <DatePicker year="1980" month="4" day="20" [minDate]="minDate" [maxDate]="maxDate"
+                    [(ngModel)]="this.currentUser.user_birthdate" (dateChange)="onDateChanged($event)"
+                    (dayChange)="onDayChanged($event)" (monthChange)="onMonthChanged($event)"
+                    (yearChange)="onYearChanged($event)" (loaded)="onDatePickerLoaded($event)"
+                    verticalAlignment="center" [visibility]="birthdatePicker ? 'visible' : 'collapse'">
+                </DatePicker>
+                <Button text="BirthDate"  class="" (tap)="changeBirthdatePicker()">
+                </Button>
+
+
+                <!-- user_city -->
+                <Label text="City" editable="false" class="label"></Label>
+                <Label hint="City" class="" keyboardType="email" [text]="this.currentUser.user_city">
+                </Label>
+
+
+                <!-- user_first_name -->
+                <Label text="First Name" editable="false" class="label"></Label>
+                <Label hint="First name" class="" [text]="this.currentUser.user_first_name">
+                </Label>
+
+
+                <!-- user_last_name -->
+                <Label text="Last name" editable="false" class="label"></Label>
+                <Label hint="Last name" [text]="this.currentUser.user_last_name" class="">
+                </Label>
+
+
+                <!-- user_gender -->
+                <Label text="Gender" editable="false" class="label"></Label>
+                <Label hint="Gender" class="" [text]="this.currentUser.user_gender">
+                    <!-- <ListPicker [items]="this.gender" selectedIndex="0" (selectedIndexChange)="onSelectedIndexChanged($event)" class="picker"></ListPicker> -->
+                </Label>
+
+
+                <!-- user_username -->
+                <Label text="Username" editable="false" class="label"></Label>
+                <Label hint="Username" [text]="this.currentUser.user_username" class="">
+                </Label>
+
+
+                <!-- user_distance -->
+                <Label text="{{this.currentUser.user_distance + ' Km'}}" class="label"></Label>
+                <Slider [value]="this.currentUser.user_distance" minValue="0" maxValue="100"
+                    (valueChange)="onSliderValueChange($event)" class="p-0 m-0">
+                </Slider>
+
+
+                <!-- Button -->
+                <Button text="Save" class="" (tap)="updateDetails()"></Button>
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </StackLayout>
+
+</FlexboxLayout>

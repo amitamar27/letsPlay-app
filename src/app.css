@@ -1,0 +1,135 @@
+/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. You can learn more about the 
+NativeScript core theme at https://github.com/nativescript/theme
+The imported CSS rules must precede all other types of rules.
+*/
+@import "~@nativescript/theme/css/core.css";
+@import "~@nativescript/theme/css/default.css";
+
+/* Place any CSS rules you want to apply on both iOS and Android here.
+This is where the vast majority of your CSS code goes. */
+
+/*
+The following CSS rule changes the font size of all Buttons that have the
+"-primary" class modifier.
+*/
+Button.-primary {
+    font-size: 18;
+}
+
+/* this is the font awsome */
+
+.fa-brands{
+    font-family: "Font Awesome 5 Brands Regular", "fa-brands-400";
+}
+
+.fa-regular{
+    font-family: "Font Awesome 5 Free Regular", "fa-regular-400";
+    font-weight: 400;
+}
+
+.fa-solid{
+    font-family: "Font Awesome 5 Free Solid", "fa-solid-900";
+    font-weight: 900;
+}
+/* untill here! */
+
+.page {
+    /* align-items: flex-start;
+    background-color: rgb(255, 255, 255); */
+    background-image: url('~/app/assets/background2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: whitesmoke;
+}
+
+
+.form {
+    margin-left: 30;
+    margin-right: 30;
+    flex-grow: 2;
+    vertical-align: middle;
+    color: whitesmoke;
+}
+
+.logo {
+    margin-top: 5%;
+    height: 100;
+    text-align: center;
+    font-weight: 400;
+    font-family: monospace;
+    /* color: whitesmoke; */
+}
+
+.logo-img{
+    margin-top: 6%;
+}
+
+.title{
+    font-weight: normal;
+    font-style: normal;
+    font-size: 65;
+    color: rgba(0, 0, 0, 0.767);
+
+}
+
+.sub-title{
+    horizontal-align: center;
+    /* margin-top: 0%; */
+    font-size: 25;
+    font-weight: 200;
+    margin-bottom: 10;
+    text-align: center;
+    color: black;
+    height: auto;
+    color: whitesmoke;
+}
+
+.btn{
+    align-items: center;
+    background-color:rgb(248, 245, 245);
+    border-radius: 70px;
+    display: flex;
+    height: 45;
+    justify-content: center;
+    margin-right: 4rem;
+    width: 200;
+    box-shadow: 
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-sing-in{
+    width: 250;
+    /* background-color:rgb(255, 255, 255); */
+}
+
+.forgot_password{
+    font-size: 12;
+    text-align: center;
+}
+
+.f-s-35{
+    font-size: 35;
+}
+
+.input{
+    font-size: 15;
+    color: whitesmoke;
+    padding-left: 5;
+}
+
+.label{
+    font-size:17 ;
+    text-align: center;
+}
+
+

@@ -1,0 +1,67 @@
+<FlexboxLayout class="page" >
+    <StackLayout class="form">
+        <!-- <Button text="login works!" class="btn btn-primary"></Button> -->
+        <Image src="~/app/assets/exercise.png" class="logo logo-img "></Image>
+        <Label class="logo title" text="LetsPlay"></Label>
+
+        <StackLayout [ngSwitch]="labelPicker">
+
+            <StackLayout *ngSwitchDefault>
+                <!-- LOGIN -->
+                <Label text="Login" textWrap="true" class="sub-title"></Label>
+                <!-- Form Control -->
+                <StackLayout class="form-container">
+                    <!-- Login Part -->
+                    <!-- Email -->
+                    <TextField hint="Email" class="input" keyboardType="email" [(ngModel)] ="this.user.email"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                    <!-- Password -->
+                    <TextField hint="Password" class="input item-form" secure="true" [(ngModel)] ="this.user.password"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                    <!-- Buttons -->
+                    <Button text="Login" class="btn btn-login m-t-20 " (tap)="loginButton()"></Button>
+                    <Button text="Sign In" class="btn btn-login m-t-20 btn-sing-in" (tap)="showRegister()"></Button>
+                    <Label text="Forgot Password?" class="forgot_password m-t-30 " (tap)="showForgotPass()"></Label>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- FORGOT PASS -->
+            <StackLayout *ngSwitchCase="'forgot_password'">
+                <Label text="Forgot Password" textWrap="true" class="sub-title"></Label>
+                <!-- Form Control -->
+                <StackLayout class="form-container">
+                    <!-- Forgot Password Part -->
+                    <!-- Email -->
+                    <TextField hint="Email" class="input item-form" keyboardType="email" [(ngModel)] ="this.user.email"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                    <!-- Buttons -->
+                    <Button text="Send Email" class="btn btn-login m-t-20 " (tap)="forgotPassword()"></Button>
+                    <Label text="Back" class="forgot_password m-t-30 " (tap)="goBackLogin()"></Label>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- REGISTER -->
+            <StackLayout *ngSwitchCase="'register'">
+                <Label text="Register" textWrap="true" class="sub-title"></Label>
+                <!-- Form Control -->
+                <StackLayout class="form-container">
+                    <!-- Forgot Password Part -->
+                    <!-- Email -->
+                    <TextField hint="Email" class="input item-form" keyboardType="email" [(ngModel)] ="this.user.email"></TextField>
+                    <StackLayout class="hr-light" ></StackLayout>
+                    <!-- Password -->
+                    <TextField hint="Password" class="input item-form" secure="true" [(ngModel)] ="this.user.password"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                    <!-- Check Password -->
+                    <TextField hint="Check Password" class="input item-form" secure="true" [(ngModel)] ="this.user.check_password"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                    <!-- Buttons -->
+                    <Button text="Create Account" class="btn btn-login m-t-20 " (tap)="createAccountButton()"></Button>
+                    <Label text="Back" class="forgot_password m-t-30 " (tap)="goBackLogin()"></Label>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+
+    </StackLayout>
+</FlexboxLayout>
