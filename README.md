@@ -11,8 +11,8 @@ Currently at the moment out team is working to complete the project an run in on
 <p>contain: Login Page - Firebase Authentication Forgot Password - based Firebase Create Account - Firebase Authentication + Cloud Storage TabView - Home / Profile / Nearby / Messages / Setting Profile - Full two-way-data-binding based on Cloud Firestore
 Get - Create - Update - Delete </p>
 
-<h1>Next Steps -</h1>
+<h1>Next Steps </h1>
 <p>Add the Home Page with Feed Add Messages Page + Chat + Notification Add Nearby + GoogleMaps Add Setting + Preferences</p>
 
-<h1>Technologies -</h1>
-Lets Play App is using the following technologies - NonSQL that is based on Firebase Firebase Authentication Firebase CloudStore Google Maps Api A cross platform framework - Nativescript + Angular Javascript + Typscript Html + Css + Font Awesome
+<h1>Technologies </h1>
+<p>Lets Play App is using the following technologies - NonSQL that is based on Firebase Firebase Authentication Firebase CloudStore Google Maps Api A cross platform framework - Nativescript + Angular Javascript + Typscript Html + Css + Font Awesome</p>
